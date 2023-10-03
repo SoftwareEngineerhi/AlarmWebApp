@@ -1,0 +1,178 @@
+/*  All page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  /* body text font  */
+  body {
+    font-family: sans-serif;
+    background-size: cover;
+    /* background-repeat: no-repeat; /* Set background-repeat to no-repeat */
+   /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNxO5GUt0Gutqi5agCalU3DZgI2LieigSdaQ&usqp=CAU"); */ 
+    animation: dayNight 15s infinite; /* 2s delay, 4s duration */
+        
+  }
+  /* display div  */
+  .d-flex {
+    display: flex;
+  }
+  /* button styling */
+  .btn {
+    outline: none;
+    border: none;
+    background-color: rgb(196, 238, 11);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  /* select time option */
+  select {
+    appearance: none;
+    outline: black;
+    background-color: rgb(3, 67, 5);
+    padding: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30%;
+    margin-right: 0.3rem;
+    cursor: pointer;
+    color: #f5e105;
+    border-color: black;
+  }
+  
+  /* margin bottom */
+  .mb {
+    margin-bottom: 1rem;
+  }
+   
+  /* show list of set Alarm */
+  
+  .main-container {
+    min-height: 94vh;
+    align-items: flex-start;
+    justify-content:center;
+    /* background: linear-gradient(90deg, #3c0bee 0%, #a709ce 100%); */
+  }
+  /* center alarm div style */
+  .clock-container {
+    padding: 2rem;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    border: #a709ce;
+    font-weight: bold;
+    color: #025413;
+    background-color:rgb(11, 234, 60);
+    animation: borderAnimation 2s infinite;
+  }
+  
+
+
+  /*current time style  */
+  .current-time {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(2, 1, 9);
+  }
+  /* alarm form style */
+  .alarm-form {
+    justify-content: space-between;
+    width: 100%;
+  }
+  /* submit button style */
+  .submit-button {
+    border-color: black;
+    border: 10px;
+    border-radius: 2rem;
+    font-weight: bold;
+  }
+  /* set alarm width */
+  .set-alarm-container {
+    width: 100%;
+  }
+  
+  /* style div set alarm */
+  .set-alarm-container .set-alarm-container-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  /* alarm style */
+  .alarm {
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+  }
+  /* delete button style */
+  .alarm .delete-alarm {
+    border-radius: 2rem;
+    background-color: rgba(35, 11, 252, 0.979);
+    font-weight: bold;
+    color: wheat;
+    font-size: xx-medium;
+  }
+  /* time style */
+  .time {
+    color: #0e141b;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  /* hover over button style */
+  .btn:focus,
+  .btn:hover {
+    box-shadow: rgb(2, 66, 2) 2px 2px 2px 1px inset, #d3ea05 -2px -2px 10px 1px inset;
+  }
+  /* page title */
+  .page-title {
+    /* background: linear-gradient(90deg, #0c2abc 0%, #e9f505 100%); */
+    background: radial-gradient(circle, 
+    rgb(4, 178, 242) 0%,     /* Red at the center (0%) */
+    rgba(0, 255, 0, 1) 50%,    /* Green in the middle (50%) */
+    rgba(0, 0, 255, 1) 100%    /* Blue at the outer edge (100%) */
+);
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+  /* background change */
+  @keyframes dayNight {
+    0% {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwfxNBBacMGQC_KL6W-ARmL6zpkaFdGKYUA&usqp=CAU");
+    }
+    100% {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbLpnh5bQFY2GS07CWINqS0rNwoIKHHVEdg&usqp=CAU");
+}
+  }
+  /* Animation border for list*/
+@keyframes borderAnimation {
+  0% {
+    border: 2px dotted rgb(232, 27, 12);
+  }
+  50% {
+    border: 2px dotted rgb(11, 135, 230);
+  }
+  100% {
+    border: 2px dotted rgb(240, 213, 11);
+  }
+}
+  /* style of devices of screen size less than 768px */
+  @media only screen and (min-width: 600px) {
+    /* adding padding to container */
+    .main-container {
+      padding-block: 2rem;
+    }
+    .clock-container {
+      justify-content: center;
+      border-radius: 50px;
+      width: 450px;
+      min-height: auto;
+    }
+  }
+  
